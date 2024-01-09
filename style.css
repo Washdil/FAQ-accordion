@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap");
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Work Sans", sans-serif;
+  background-color: hsl(275, 100%, 97%);
+}
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 
+    header
+  */
+.background {
+  min-height: 35vh;
+  width: 100%;
+
+  background-image: url(assets/images/background-pattern-desktop.svg);
+  background-position: center;
+  background-size: cover;
+}
+
+/*
+    accordion
+  */
+.faq {
+  max-width: 560px;
+  min-width: 560px;
+  margin-inline: auto;
+  padding: 25px 30px;
+
+  background-color: white;
+  box-shadow: 6.7px 6.7px 5.3px rgba(47, 21, 51, 0.032),
+    22.3px 22.3px 17.9px rgba(47, 21, 51, 0.048),
+    100px 100px 80px rgba(47, 21, 51, 0.08);
+  border-radius: 15px;
+
+  transform: translateY(-95px);
+  transition: 300ms ease-in-out;
+}
+.faq header {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 35px;
+}
+h1 {
+  font-size: 45px;
+  color: hsl(292, 42%, 14%);
+}
+/* 
+  faq items
+  */
+.faq__container {
+  display: grid;
+  gap: 30px;
+}
+.faq__container_item-click {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.faq__container_item-click p {
+  max-width: 90%;
+  font-weight: 600;
+  color: hsl(292, 42%, 14%);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+}
+.faq__container_item-click p:hover {
+  filter: brightness(3.5);
+}
+.faq__container_item > p {
+  color: hsl(292, 16%, 49%);
+}
+.faq__container_item-collapse {
+  transition: 300ms ease-in-out;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+.active {
+  opacity: 1;
+  height: 100%;
+}
+.expand {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  display: grid;
+  place-items: center;
+
+  background-color: hsl(292, 42%, 14%);
+  filter: brightness(3.5);
+  color: white;
+  border-radius: 50%;
+
+  transition: 300ms ease-in-out;
+}
+.expand__active {
+  filter: brightness(1.5);
+}
+
+.horizontal-line,
+.vertical-line {
+  position: absolute;
+
+  width: 50%;
+  height: 10%;
+  background-color: white;
+  transition: 400ms ease-in-out;
+}
+.vertical-line {
+  transform: rotate(90deg);
+}
+.rotate {
+  transform: rotate(0);
+}
+
+@media screen and (max-width: 560px) {
+  .faq {
+    max-width: 90%;
+    min-width: 90%;
+    margin-inline: auto;
+    padding: 25px 30px;
+
+    background-color: white;
+    box-shadow: 6.7px 6.7px 5.3px rgba(47, 21, 51, 0.032),
+      22.3px 22.3px 17.9px rgba(47, 21, 51, 0.048),
+      100px 100px 80px rgba(47, 21, 51, 0.08);
+    border-radius: 15px;
+
+    transform: translateY(-95px);
+    transition: 300ms ease-in-out;
+  }
+  .background {
+    min-height: 30vh;
+    background-image: url(assets/images/background-pattern-mobile.svg);
+  }
+}

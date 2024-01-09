@@ -36,8 +36,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Washdil/FAQ-accordion)
-- Live Site URL: [Add live site URL here](https://washdil.github.io/FAQ-accordion/)
+- Solution URL: (https://github.com/Washdil/FAQ-accordion)
+- Live Site URL: (https://washdil.github.io/FAQ-accordion/)
 
 ## My process
 
